@@ -1,4 +1,3 @@
-import AddProductForm from '@/components/products/AddProductForm'
 import EditProductForm from '@/components/products/EditProductForm'
 import ProductForm from '@/components/products/ProductForm'
 import Heading from '@/components/ui/Heading'

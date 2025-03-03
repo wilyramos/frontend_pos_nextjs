@@ -10,7 +10,7 @@ export default function CouponForm() {
   const handleSubmit = async  (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget)
-    const couponName = formData.get('coupon_name')?.toString()!
+    const couponName = formData.get('coupon_name') as string
     if (!couponName.length) return
     await applyCoupon(couponName)
   }

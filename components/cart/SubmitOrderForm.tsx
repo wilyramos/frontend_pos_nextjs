@@ -2,7 +2,6 @@ import { submitOrder } from '@/actions/submit-order-action'
 import React, { useActionState, useEffect } from 'react'
 import { useStore } from "@/src/store"
 import { toast } from 'react-toastify'
-import { error } from 'console'
 
 export default function SubmitOrderForm() {
 
@@ -33,7 +32,7 @@ export default function SubmitOrderForm() {
             toast.success(state.success)
             clearOrder()
         }
-    }, [state])
+    }, [state, clearOrder])
 
     useActionState(submitOrder,{
         errors: [],

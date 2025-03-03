@@ -17,7 +17,7 @@ type Value = ValuePiece | [ValuePiece, ValuePiece]
 export default function TransactionFilter() {
 
     const [date, setDate] = useState<Value>(new Date());
-    const formattedDate = format(date?.toString()!, "yyyy-MM-dd");
+    const formattedDate = format((date?.toString() ?? ''), "yyyy-MM-dd");
     console.log(formattedDate);
     const { data, isLoading } = useQuery({
         queryKey: ["sales", formattedDate],
